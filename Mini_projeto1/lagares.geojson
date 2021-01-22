@@ -1,0 +1,8 @@
+var lagares = {
+"type": "FeatureCollection",
+"name": "lagares",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OID_": 0, "Name": "Futebol Clube de Lagares", "FolderPath": "Clubes_Felgueiras.kml\/Os Meus locais", "Tipologia": "Relvado Artificial", "Lotacao": "Sem Bancada" }, "geometry": { "type": "Point", "coordinates": [ -8.221833163999975, 41.365339951000067, 0.0 ] } }
+]
+}

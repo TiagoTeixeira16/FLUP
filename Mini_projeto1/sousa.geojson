@@ -1,0 +1,8 @@
+var sousa = {
+"type": "FeatureCollection",
+"name": "sousa",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OID_": 0, "Name": "União Futebol Clube Sousa", "FolderPath": "Clubes_Felgueiras.kml\/Os Meus locais", "Tipologia": "Sem Relvado", "Lotacao": "Sem Bancada" }, "geometry": { "type": "Point", "coordinates": [ -8.255263208999963, 41.350604084000054, 0.0 ] } }
+]
+}

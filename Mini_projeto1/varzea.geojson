@@ -1,0 +1,8 @@
+var varz = {
+"type": "FeatureCollection",
+"name": "varzea",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OID_": 0, "Name": "Associação Desportiva de Várzea Futebol Clube", "FolderPath": "Clubes_Felgueiras.kml\/Os Meus locais", "Tipologia": "Sem Relvado", "Lotacao": "Sem Bancada" }, "geometry": { "type": "Point", "coordinates": [ -8.194517012999938, 41.350449725000033, 0.0 ] } }
+]
+}

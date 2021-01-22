@@ -1,0 +1,8 @@
+var regilde = {
+"type": "FeatureCollection",
+"name": "regilde",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OID_": 0, "Name": "União Recreativa Cultural e Desportiva de Regilde", "FolderPath": "Clubes_Felgueiras.kml\/Os Meus locais", "Tipologia": "Sem Relvado", "Lotacao": "Sem Bancada" }, "geometry": { "type": "Point", "coordinates": [ -8.273444713999936, 41.361473036000064, 0.0 ] } }
+]
+}

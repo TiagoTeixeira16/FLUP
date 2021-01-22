@@ -1,0 +1,8 @@
+var torrados = {
+"type": "FeatureCollection",
+"name": "torrados",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OID_": 0, "Name": "União Desportiva de Torrados", "FolderPath": "Clubes_Felgueiras.kml\/Os Meus locais", "Tipologia": "Relvado Artificial", "Lotacao": "2000" }, "geometry": { "type": "Point", "coordinates": [ -8.229634511999961, 41.351959819000058, 0.0 ] } }
+]
+}

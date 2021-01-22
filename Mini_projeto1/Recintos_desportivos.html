@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset=utf-8> 
+        <link rel="stylesheet" href="Recintos_desportivos.css"> 
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"/>  
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+
+    <style>
+        #mapDIV{
+            height: 700px;
+            width: 700px;
+            border: solid 1px rgb(255, 255, 255);
+            margin-left: 135px;
+        }
+  </style></head>
+
+<body>
+    <div id="menu">
+        <script src="felgueiras.geojson"></script>
+        <script src="varzea.geojson"></script>
+        <script src="barrosas.geojson"></script>
+        <script src="airaes.geojson"></script>
+        <script src="varziela.geojson"></script>
+        <script src="torrados.geojson"></script>
+        <script src="sousa.geojson"></script>
+        <script src="sendim.geojson"></script>
+        <script src="regilde.geojson"></script>
+        <script src="pombeiro.geojson"></script>
+        <script src="pinheiro.geojson"></script>
+        <script src="moure.geojson"></script>
+        <script src="lixa.geojson"></script>
+        <script src="lagares.geojson"></script>
+        <script src="jugueiros.geojson"></script>
+        <script src="friande.geojson"></script>
+        <ul>
+            <li><a href="INICIO_.html">Início</a></li>
+                <li><a href="Capa_apresentacao.html">Apresentação</a></li>
+                <li><a href="Formaçao_.html">Formação</a></li>
+                <li><a href="Trabalhos_elaborados.html">Trabalhos Desenvolvidos</a></li>
+                <li><a href="Cartografia_elaborada.html">Cartografia</a></li>
+                <li><a href="Outras_curiosidades.html">Outras Curiosidades</a></li>
+                <li><a href="Recintos_desportivos.html">Recintos Desportivos de Felgueiras</a></li>
+        </ul>
+    </div>
+</header>
+
+<h3>Recintos Desportivos de Felgueiras</h3>
+<section class="corpo"> 
+
+<div id='mapDIV'></div>
+<script>
+
+  var map=L.map(document.getElementById('mapDIV'), {
+  center: [41.351, -8.195],
+  zoom: 12
+  });
+  
+var basemap = L.tileLayer('http://b.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{}); 
+basemap.addTo(map);
+
+var felgueiras = L.geoJSON(fcf,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup( nome + "<br> <img src='FCFelgueiras.png' alt='foto' class='pop_img' width='300' height='300'/>"+ tipologia + " com " + lotacao + " espectadores");         
+    }}).addTo(map);
+ felgueiras.bindTooltip('<h2>FCFelgueiras 1932</h2>');
+
+var varzeaa= L.geoJSON(varz,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup( nome + "<br> <img src='varzea.png' alt='foto' class='pop_img' width='300' height='300'/>"+ tipologia + " " + lotacao + " ");         
+    }}).addTo(map);
+ varzeaa.bindTooltip('<h2>Associação Desportiva de Várzea FC</h2>');
+ 
+var barr = L.geoJSON(barro,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='barrosas.png' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " com " + lotacao + " espectadores ");         
+    }}).addTo(map);
+ barr.bindTooltip('<h2>CRPBarrosas</h2>');
+
+var airaess = L.geoJSON(aira,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='airaes.png' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " " + lotacao + " ");         
+    }}).addTo(map);
+ airaess.bindTooltip('<h2>Airães FC</h2>');
+
+var varzielaa = L.geoJSON(varziela,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='varziela.png' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " " + lotacao + " ");         
+    }}).addTo(map);
+ varzielaa.bindTooltip('<h2>CRCD Varziela 1982</h2>');
+
+ var torradoss = L.geoJSON(torrados,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='torrados.png' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " com " + lotacao + " espectadores ");         
+    }}).addTo(map);
+ torradoss.bindTooltip('<h2>UDTorrados</h2>');
+
+var sousaa = L.geoJSON(sousa,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='sousa.jpg' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " " + lotacao + " ");         
+    }}).addTo(map);
+ sousaa.bindTooltip('<h2>UFC Sousa</h2>');
+
+var sendimm = L.geoJSON(sendim,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='sendim.png' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " " + lotacao + " ");         
+    }}).addTo(map);
+ sendimm.bindTooltip('<h2>GD Sendim</h2>');
+
+var regildee = L.geoJSON(regilde,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='regilde.jpg' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " " + lotacao + " ");         
+    }}).addTo(map);
+ regildee.bindTooltip('<h2>URCD Regilde</h2>');
+
+ var pombeiroo = L.geoJSON(pombeiro,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='pombeiro.jpg' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " " + lotacao + " ");         
+    }}).addTo(map);
+ pombeiroo.bindTooltip('<h2>ACRD Pombeiro</h2>');
+
+ var pinheiroo = L.geoJSON(pinheiro,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='pinheiro.jpg' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " com " + lotacao + " espectadores");         
+    }}).addTo(map);
+ pinheiroo.bindTooltip('<h2>GDST Pinheiro</h2>');
+
+ var mouree = L.geoJSON(moure,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='moure.png' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " " + lotacao + "");         
+    }}).addTo(map);
+ mouree.bindTooltip('<h2>UCD Moure</h2>');
+
+ var lixaa = L.geoJSON(lixa,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='lixa.png' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " com " + lotacao + " espectadores ");         
+    }}).addTo(map);
+ lixaa.bindTooltip('<h2>Futebol Clube da Lixa</h2>');
+
+ var lagaress = L.geoJSON(lagares,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='lagares.jpg' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " " + lotacao + "");         
+    }}).addTo(map);
+ lagaress.bindTooltip('<h2>Futebol Clube de Lagares</h2>');
+
+ var jugueiross = L.geoJSON(jugueiros,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='jugueiros.png' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " " + lotacao + "");         
+    }}).addTo(map);
+ jugueiross.bindTooltip('<h2>ACR Jugueiros</h2>');
+
+var friandee= L.geoJSON(friande,{
+
+color: '#009933',
+weight: 10,
+
+onEachFeature: function (feature, layer) {  
+    let nome = feature.properties.Name;
+    let tipologia = feature.properties.Tipologia;
+    let lotacao = feature.properties.Lotacao;
+
+layer.bindPopup(nome + "<br> <img src='friande.jpg' alt='foto' class='pop_img' width='300' height='300'/>" + tipologia + " " + lotacao + "");         
+    }}).addTo(map);
+ friandee.bindTooltip('<h2>GDR Friande</h2>');
+</script>
+</section>
+<h2>Clubes de Futebol de Maior Influência</h2>
+<h3>Futebol Clube de Felgueiras 1932 </h3>
+        <p>Campeonato de Portugal, I Divisão</p>
+        <p>Estádio Doutor Machado Matos</p>
+        <td> 
+            <div class="imagem">
+                <img src="estadiofelgueiras.jpg" width="600px" height="300px">
+            </div>
+        </td>
+<h3>Futebol Clube da Lixa </h3>
+        <p>Campeonato de Portugal, II Divisão</p>
+        <p>Estádio Senhor do Amparo</p>
+        <td> 
+            <div class="imagem">
+                <img src="estadiolixa.jpg" width="600px" height="300px">
+            </div>
+        </td>
+<h3>Centro Recreativo Popular de Barrosas </h3>
+        <p>Divisão Elite Serie II</p>
+        <p>Complexo do Centro Recreativo Popular de Barrosas</p>
+        <td> 
+            <div class="imagem">
+                <img src="estadiobarrosasjpg.jpg" width="600px" height="300px">
+            </div>
+        </td>
+<h3>Futebol Clube Lagares </h3>
+        <p>Divisão Honra Serie II</p>
+        <p>Jaguar Arena</p>
+        <td> 
+            <div class="imagem">
+                <img src="estadiolagares.jpg" width="600px" height="300px">
+            </div>
+        </td>
+<h3>Associação Desportiva de Várzea Futebol Clube </h3>
+        <p>Divisão Honra Serie II</p>
+        <p>Campo de Futebol de Varzea</p>
+        <td> 
+            <div class="imagem">
+                <img src="estadiovarzea.jpg" width="600px" height="300px">
+            </div>
+        </td>
+</body>

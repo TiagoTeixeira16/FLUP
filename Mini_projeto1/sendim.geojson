@@ -1,0 +1,8 @@
+var sendim = {
+"type": "FeatureCollection",
+"name": "sendim",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OID_": 0, "Name": "Grupo Desportivo de Sendim", "FolderPath": "Clubes_Felgueiras.kml\/Os Meus locais", "Tipologia": "Sem Relvado", "Lotacao": "Sem Bancada" }, "geometry": { "type": "Point", "coordinates": [ -8.185749213999941, 41.391365077000046, 0.0 ] } }
+]
+}

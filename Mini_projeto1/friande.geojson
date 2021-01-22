@@ -1,0 +1,8 @@
+var friande = {
+"type": "FeatureCollection",
+"name": "friande",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OID_": 0, "Name": "Grupo Desportivo e Recreativo de Friande", "FolderPath": "Clubes_Felgueiras.kml\/Os Meus locais", "Tipologia": "Sem Relvado", "Lotacao": "Sem Bancada" }, "geometry": { "type": "Point", "coordinates": [ -8.175317905999975, 41.374842302000047, 0.0 ] } }
+]
+}

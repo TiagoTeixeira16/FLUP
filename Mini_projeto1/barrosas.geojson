@@ -1,0 +1,8 @@
+var barro = {
+"type": "FeatureCollection",
+"name": "barrosas",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OID_": 0, "Name": "Centro Recreativo Popular de Barrosas", "FolderPath": "Clubes_Felgueiras.kml\/Os Meus locais", "Tipologia": "Relvado Sintético", "Lotacao": "5000" }, "geometry": { "type": "Point", "coordinates": [ -8.264636152999969, 41.327468976000034, 0.0 ] } }
+]
+}

@@ -1,0 +1,51 @@
+body{
+    background-image: url(fundo_porto.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    color:black;
+    font-style:normal;
+    text-align:center;
+    width: 960px;
+    margin: auto;
+    line-height:0,5cm; 
+    font-size: 18px;
+}
+#menu ul{
+    text-align: center;
+    float: center;
+    margin-top:auto;
+    background-color:rgb(201, 201, 201);
+    list-style: none;
+}
+#menu ul li{
+    display:inline;
+}
+#menu ul li a{
+    padding:10px 10px;
+    display: inline-block;
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+}
+#menu ul li a:hover{
+    color:white;
+}
+#trabalho1{
+    color:black;
+    letter-spacing:normal;
+}
+#trabalho2{
+    color:black;
+    letter-spacing:normal;
+}
+#trabalho3{
+    color:black;
+    letter-spacing:normal;
+}
+#trabalho4{
+    color:black;
+    letter-spacing:normal;
+}
+#trabalho5{
+    color:black;
+    letter-spacing:normal;
+}
